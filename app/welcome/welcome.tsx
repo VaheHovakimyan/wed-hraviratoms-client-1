@@ -1,4 +1,3 @@
-import {Link} from "react-router";
 import main_image from '../../public/Dana-Whitley3.jpg';
 
 export function Welcome() {
