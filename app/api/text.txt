@@ -1,0 +1,14 @@
+image
+Main title(cursive)
+Names of clients
+
+title
+date
+hour
+
+route:
+to locations
+
+
+Tables of guests
+
