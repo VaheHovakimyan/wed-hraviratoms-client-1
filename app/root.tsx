@@ -52,7 +52,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         <ScrollRestoration />
                         <Scripts />
                         <RoutesComponent />
+                        {/* <CallTo /> */}
+                        {/* <Sound /> */}
                         <Footer />
+                        {/* <FooterHraviratoms /> */}
                     </div>
                 </div>
 

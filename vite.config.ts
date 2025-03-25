@@ -5,4 +5,14 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+  optimizeDeps: {
+    include: ["@mui/material", "@mui/icons-material"],
+  },
+  resolve: {
+    alias: {
+      "@mui/material/utils": "@mui/material/node/utils/index.js",
+    },
+  },
 });
+// import { defineConfig } from "vite";
+// import react from "@vitejs/plugin-react";
