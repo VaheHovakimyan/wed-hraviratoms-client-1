@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import LocationComponent from "~/components/LocationComponent";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export interface Location {
     id: number,
@@ -46,9 +49,24 @@ const locationsData: Location[] = [
 
 
 export default function Locations() {
+    useEffect((): void => {
+        AOS.init();
+    }, []);
+
     return (
         <>
-            {locationsData.map((location) => <LocationComponent key={location.id} location={location}  />)}
+            {locationsData.map((location, index) => {
+                return (
+                    <div
+                        data-aos={`fade-${index % 2 === 0 ? 'right' : 'left'}`}
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"
+                        data-aos-duration="1000"
+                    >
+                        <LocationComponent key={location.id} location={location} />
+                    </div>
+                )
+            })}
         </>
     );
 }

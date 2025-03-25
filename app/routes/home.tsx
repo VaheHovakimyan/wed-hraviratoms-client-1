@@ -1,12 +1,15 @@
-import type {Route} from "./+types/home";
-import {Welcome} from "~/welcome/welcome";
+import type { Route } from "./+types/home";
+import { Welcome } from "~/welcome/welcome";
 import TimelineElement from "~/components/TimelineElement";
 import Footer from "~/components/Footer";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { Fragment, useEffect } from "react";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
     return [
-        {title: "Hraviratoms.com"},
-        {name: "description", content: "Welcome to React Router!"},
+        { title: "Hraviratoms.com" },
+        { name: "description", content: "Welcome to React Router!" },
     ];
 }
 
@@ -45,9 +48,22 @@ const timeline: HomeProps[] = [
 ];
 
 export default function Home() {
+    const tableIndexes: number[] = [1, 2, 3, 4];
+    const guestIndexes: number[] = [1, 2, 3, 4, 5, 6];
+
+    useEffect((): void => {
+        AOS.init();
+    }, []);
+
     return (
         <>
-            <Welcome/>
+            <div
+                data-aos="fade-up"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="800"
+            >
+                <Welcome />
+            </div>
 
             <div className="flex flex-col gap-4 justify-center items-center m-auto text-center py-10">
                 <h2 className="text-3xl">Օրվա ծրագիր ❤️</h2>
@@ -55,26 +71,40 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-[140px] items-center justify-center">
-                {timeline.map((item) => <TimelineElement key={item.id} item={item}/>)}
+                {timeline.map((item, index) => {
+                    return (
+                        <div
+                            data-aos={`fade-${index % 2 === 0 ? 'right' : 'left'}`}
+                            data-aos-offset="200"
+                            data-aos-easing="ease-in-sine"
+                            data-aos-duration="700"
+                        >
+                            <TimelineElement key={item.id} item={item} />
+                        </div>
+                    )
+                })}
             </div>
 
             <div className="m-auto text-center pt-20">
-            <h3 className="uppercase p-6">Table 1</h3><p className="py-1">Guest Gustavo 1</p>
-            <p className="py-1">Guest Gustavo 2</p><p className="py-1">Guest Gustavo 3</p>
-            <p className="py-1">Guest Gustavo 4</p><p className="py-1">Guest Gustavo 5</p>
-            <p className="py-1">Guest Gustavo 6</p><h3 className="uppercase p-6">Table 2</h3>
-            <p className="py-1">Guest Gustavo 1</p><p className="py-1">Guest Gustavo 2</p>
-            <p className="py-1">Guest Gustavo 3</p><p className="py-1">Guest Gustavo 4</p>
-            <p className="py-1">Guest Gustavo 5</p><p className="py-1">Guest Gustavo 6</p>
-            <h3 className="uppercase p-6">Table 3</h3><p className="py-1">Guest Gustavo 1</p>
-            <p className="py-1">Guest Gustavo 2</p><p className="py-1">Guest Gustavo 3</p>
-            <p className="py-1">Guest Gustavo 4</p><p className="py-1">Guest Gustavo 5</p>
-            <p className="py-1">Guest Gustavo 6</p>
-            <h3 className="uppercase p-6">Table 4</h3><p className="py-1">Guest Gustavo 1</p>
-            <p className="py-1">Guest Gustavo 2</p><p className="py-1">Guest Gustavo 3</p>
-            <p className="py-1">Guest Gustavo 4</p><p className="py-1">Guest Gustavo 5</p>
-            <p className="py-1">Guest Gustavo 6</p>
-            </div>
+
+                {tableIndexes.map((item: number, index: number) => {
+                    return (
+                        <Fragment key={item}>
+                            <div
+                                data-aos={`fade-${index % 2 === 0 ? 'right' : 'left'}`}
+                                data-aos-offset="200"
+                                data-aos-easing="ease-in-sine"
+                                data-aos-duration="700"
+                            >
+                                <h3 className="uppercase p-6">Table {item}</h3>
+                                {guestIndexes.map((item: number) => {
+                                    return <p className="py-1">Guest Gustavo {item}</p>
+                                })}
+                            </div>
+                        </Fragment>
+                    )
+                })}
+            </div >
         </>
     );
 }

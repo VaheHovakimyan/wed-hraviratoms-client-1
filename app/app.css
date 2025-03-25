@@ -15,6 +15,7 @@ body {
     color-scheme: dark;
     color: white;
   }
+  overflow-x: hidden !important;
 }
 
 

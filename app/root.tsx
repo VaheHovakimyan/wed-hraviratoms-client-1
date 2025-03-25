@@ -27,7 +27,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <head>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-
+                <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 
                 {/*<link rel="preconnect" href="https://fonts.googleapis.com"/>*/}
                 {/*<link rel="preconnect" href="https://fonts.gstatic.com"/>*/}
@@ -55,6 +55,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         <Footer />
                     </div>
                 </div>
+
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
             </body>
         </html>
     );
