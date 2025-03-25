@@ -9,7 +9,7 @@ import { Fragment, useEffect } from "react";
 export function meta({ }: Route.MetaArgs) {
     return [
         { title: "Hraviratoms.com" },
-        { name: "description", content: "Welcome to React Router!" },
+        { name: "description", content: "Welcome to wed invitation!" },
     ];
 }
 
