@@ -23,27 +23,27 @@ export interface HomeProps {
 const timeline: HomeProps[] = [
     {
         id: 0,
-        mainTitle: "Restaurant",
+        mainTitle: "Հարսի տուն",
         date: 'Monday, 25 September of 2025',
         hour: "12:00"
     },
     {
         id: 1,
-        mainTitle: "Restaurant",
+        mainTitle: "Պսակադրության արարողություն",
         date: 'Monday, 25 September of 2025',
         hour: "14:00",
     },
     {
         id: 2,
-        mainTitle: "Restaurant",
+        mainTitle: "Հարսանյանց Հանդիսություն",
         date: 'Monday, 25 September of 2025',
-        hour: "16:00",
+        hour: "17:30",
     },
     {
         id: 3,
-        mainTitle: "Restaurant",
+        mainTitle: "Ավարտ",
         date: 'Monday, 25 September of 2025',
-        hour: "18:00",
+        hour: "23:00",
     }
 ];
 
