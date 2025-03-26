@@ -56,6 +56,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         {/* <Sound /> */}
                         <Footer />
                         {/* <FooterHraviratoms /> */}
+                        
                     </div>
                 </div>
 
