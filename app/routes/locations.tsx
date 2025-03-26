@@ -59,7 +59,7 @@ export default function Locations() {
                 return (
                     <div
                         data-aos={`fade-${index % 2 === 0 ? 'right' : 'left'}`}
-                        data-aos-offset="400"
+                        data-aos-offset="450"
                         data-aos-easing="ease-in-sine"
                         data-aos-duration="1000"
                     >
