@@ -18,7 +18,7 @@ const locationsData: Location[] = [
         title: 'Հարսի տուն',
         image: "2776786976.jpg",
         address: 'Վաղարշապատ, Չարենց փողոց, 15',
-        telephoneNumber: '(099) 999999',
+        telephoneNumber: '(+374) 99 999999',
         mapLink: 'string',
     },
     {
@@ -26,7 +26,7 @@ const locationsData: Location[] = [
         title: 'Հռիփսիմե եկեղեցի',
         image: "0b44886a-4ebd-11ec-95d5-1e04f738edcf.800x600.jpg",
         address: 'Մեսրոպ Մաշտոց 1',
-        telephoneNumber: '(099) 999999',
+        telephoneNumber: '(+374) 99 999999',
         mapLink: 'string',
     },
     {
@@ -34,7 +34,7 @@ const locationsData: Location[] = [
         title: 'Փեսայի տուն',
         image: "morgan-blake-7-1024x732.webp",
         address: 'Վաղարշապատ, Մյասնիկյան փողոց, 12',
-        telephoneNumber: '(099) 999999',
+        telephoneNumber: '(+374) 99 999999',
         mapLink: 'string',
     },
     {
@@ -42,7 +42,7 @@ const locationsData: Location[] = [
         title: 'Ռեստորան Նոր Դվին',
         image: "82526439_225698741783968_9124258773398384256_n.jpg",
         address: 'M-3 մայրուղի, 12',
-        telephoneNumber: '(099) 999999',
+        telephoneNumber: '(+374) 99 999999',
         mapLink: 'string',
     },
 ];
