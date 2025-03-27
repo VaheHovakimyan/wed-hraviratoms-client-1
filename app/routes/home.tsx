@@ -24,25 +24,25 @@ const timeline: HomeProps[] = [
     {
         id: 0,
         mainTitle: "Հարսի տուն",
-        date: 'Monday, 25 September of 2025',
+        date: 'Երկուշաբթի, 25 Սեպտեմբերի 2025',
         hour: "12:00"
     },
     {
         id: 1,
         mainTitle: "Պսակադրության արարողություն",
-        date: 'Monday, 25 September of 2025',
+        date: 'Երկուշաբթի, 25 Սեպտեմբերի 2025',
         hour: "14:00",
     },
     {
         id: 2,
-        mainTitle: "Հարսանյանց Հանդիսություն",
-        date: 'Monday, 25 September of 2025',
+        mainTitle: "Հարսանյաց Հանդիսություն",
+        date: 'Երկուշաբթի, 25 Սեպտեմբերի 2025',
         hour: "17:30",
     },
     {
         id: 3,
         mainTitle: "Ավարտ",
-        date: 'Monday, 25 September of 2025',
+        date: 'Երկուշաբթի, 25 Սեպտեմբերի 2025',
         hour: "23:00",
     }
 ];
@@ -67,7 +67,7 @@ export default function Home() {
 
             <div className="flex flex-col gap-4 justify-center items-center m-auto text-center py-10">
                 <h2 className="text-3xl">Օրվա ծրագիր ❤️</h2>
-                <p>September 15, 2025</p>
+                <p>ՍԵպտեմբերի 15, 2025</p>
             </div>
 
             <div className="flex flex-col gap-[140px] items-center justify-center">
@@ -96,9 +96,9 @@ export default function Home() {
                                 data-aos-easing="ease-in-sine"
                                 data-aos-duration="700"
                             >
-                                <h3 className="uppercase p-6">Table {item}</h3>
+                                <h3 className="uppercase p-6">Սեղան {item}</h3>
                                 {guestIndexes.map((item: number) => {
-                                    return <p className="py-1">Guest Gustavo {item}</p>
+                                    return <p className="py-1">Հյուր {item}</p>
                                 })}
                             </div>
                         </Fragment>
